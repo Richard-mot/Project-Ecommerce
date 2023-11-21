@@ -1,0 +1,176 @@
+*{
+    font-size:large;
+}
+
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; 
+}
+
+.logo {
+    margin-right: 20px; 
+    display: flex;
+    align-items: center;
+}
+.logo-icon{
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+.account {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; 
+}
+
+.menu button,
+.menu input,
+.menu select,
+.menu a {
+    margin-right: 15px; 
+}
+.icon{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.icon-acc{
+    width:24px;
+    height: 24px;
+    background: white;
+    margin-right: 10px;
+}
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.right a,
+.right button {
+    margin-right: 20px;
+}
+
+
+.menu button{
+    background: transparent;
+    
+}
+
+.search-container {
+    display: flex;
+    
+}
+
+.search-bar {
+    flex: 1;
+    padding: 10px;
+    border-top: 1px solid black; 
+    border-right:none ;
+    border-bottom: 1px solid black; 
+    border-left: 1px solid black;  
+    padding: 8px;
+    outline: none; 
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.search-btn {
+    
+   
+    border-top: 1px solid black; 
+    border-right: 1px solid black; 
+    border-bottom: 1px solid black; 
+    border-left: none; 
+    padding: 8px; 
+    
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.dropdown-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.selected-option {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.option {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: blue;
+    color: white;
+}
+
+.content {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+.left-section{
+    margin-left: 15%;
+}
+.left-text p{
+    color:darkblue;
+    font-size:x-large;
+}
+
+.right-section .home-product {
+    width: 680px; 
+    height: 636px; 
+}
+
+button {
+    background: blue;
+    color: white;
+    border-radius: 10px;
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+

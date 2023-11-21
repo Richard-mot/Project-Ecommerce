@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .signup-form {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background-color: white;
+      padding: 20px;
+      width: 400px;
+      border-radius: 30px;
+    }
+
+    .signup-form h1 {
+      font-size: 36px;
+
+      margin-bottom: 20px;
+
+    }
+
+    .signup-form input[type="text"],
+    .signup-form input[type="email"],
+    .signup-form input[type="password"] {
+      width: 80%;
+      height: 30px;
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 18px;
+    }
+
+    .signup-form button {
+      width: 50%;
+      height: 30px;
+    }
+
+    .remember-me {
+      display: flex;
+      align-items: center;
+      margin-left: 20px;
+    }
+
+    .remember-me input[type="checkbox"] {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+
+<body style="background: lightblue">
+  <header class="fixed">
+    <div class="logo">
+      <a class="home-link" href="index.php"><img src="images/home_icon.svg" alt="home icon" class="icon" href="#" /></a>
+      <img src="images/logo.png" alt="logo" class="logo-icon" />
+      <h1>VaalElectronics</h1>
+    </div>
+
+    </div>
+  </header>
+
+  <form action="register-action.php" method="post" class="signup-form">
+    <h1>Sign Up</h1>
+    <input type="text" name="username" placeholder="Username" required /><br />
+    <input type="email" name="email" placeholder="Email" required /><br />
+    <input type="password" name="password" placeholder="Password" required /><br />
+    
+    <button type="submit">Sign Up</button>
+    <div class="remember-me">
+      <input type="checkbox" />
+      <h3>Remember me</h3>
+    </div>
+    <span id="registration-msg"></span>
+  </form>
+  
+
+
+</body>
+
+</html>

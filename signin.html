@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .form-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      /* Optional: Add some padding for better visual appearance */
+      width: 400px;
+      /* Set the width of the form-container */
+      height: 300px;
+    }
+
+    .login-form {
+      background: white;
+      padding: 20px;
+      padding-left: 60px;
+      border-radius: 30px;
+    }
+
+    .form-container h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      margin-left: 50px;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="password"] {
+      width: 80%;
+      height: 30px;
+      margin-bottom: 15px;
+      border: 1px solid gray;
+      padding: 10px;
+      font-size: 18px;
+    }
+
+    .form-container button {
+      width: 50%;
+      height: 30px;
+      margin-bottom: 20px;
+
+      margin-left: 50px;
+      cursor: pointer;
+    }
+
+    .below-form {
+      display: flex;
+      align-items: center;
+    }
+
+    .remember-me {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+
+    }
+
+    .forget-link {
+      margin-right: 20px;
+
+    }
+
+    .register-link {
+      margin-top: 20px;
+      margin-left: 35px;
+    }
+
+    .forget-link a,
+    .register-link a {
+      text-decoration: none;
+      color: black;
+    }
+    #login-error {
+      color: red;
+    }
+  </style>
+  
+</head>
+
+<body style="background: lightblue">
+  <div class="container">
+    <header class="fixed-header">
+      <div class="top-row">
+        <div class="logo">
+          <a class="home-link" href="index.php"><img src="images/home_icon.svg" alt="home icon" class="icon"
+              href="#" /></a>
+          <img src="images/logo.png" alt="logo" class="logo-icon" />
+          <h1>VaalElectronics</h1>
+        </div>
+      </div>
+    </header>
+    <div class="form-container">
+      <form action="signin-action.php" method="post" class="login-form">
+        <h1>Sign in</h1>
+        <input type="text" name="username" placeholder="Username" required /><br />
+        <input type="password" name="password" placeholder="Password" required /><br />
+        <div>
+          <span id="login-error"></span>
+        </div>
+
+
+        <button type="submit">Login</button>
+        
+        
+        
+
+        <div class="below-form">
+          <div class="remember-me">
+            <input type="checkbox" />
+            <h3>Remember me</h3>
+          </div>
+          <div class="forget-link">
+            <a href="forgetpassword.html">Forget Password</a>
+          </div>
+        </div>
+      </form>
+      <div class="register-link">
+        <a href="register.html">Don't you have an account? Sign Up</a>
+      </div>
+    </div>
+  </div>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const error = urlParams.get('error');
+
+    // Check if there's an error in the URL
+    if (error) {
+      // Update the span with the error message
+      document.getElementById('login-error').innerText = error;
+
+      // Store the error message in sessionStorage
+      sessionStorage.setItem('error_message', error);
+
+      // Remove the error parameter from the URL
+      const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+      window.history.replaceState({}, document.title, cleanUrl);
+    } else {
+      // Check if there's a stored error message in sessionStorage
+      const storedError = sessionStorage.getItem('error_message');
+      if (storedError) {
+        // Update the span with the stored error message
+        document.getElementById('login-error').innerText = storedError;
+
+        // Clear the stored error message from sessionStorage
+        sessionStorage.removeItem('error_message');
+      }
+    }
+  });
+    </script>
+
+</body>
+
+</html>

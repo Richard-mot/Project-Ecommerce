@@ -1,0 +1,394 @@
+<script>
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Get the options elements
+    const options = document.querySelectorAll('.option');
+
+    // Add click event listener to each option
+    options.forEach(option => {
+      option.addEventListener('click', function () {
+        // Get the selected option's data-value attribute
+        const selectedValue = this.getAttribute('data-value');
+
+        // Redirect the user based on the selected option
+        if (selectedValue === 'smartphones') {
+          window.location.href = 'smartphones.php';
+        } else if (selectedValue === 'laptops') {
+          window.location.href = 'laptops.php';
+        } else if (selectedValue === 'accessories') {
+          window.location.href = 'accessories.php';
+        } else if (selectedValue === 'homeappliances') {
+          window.location.href = 'homeappliances.php';
+        }
+      });
+    });
+  });
+</script>
+<style>
+  #cartButton {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  #cartItemCount {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: yellow;
+    color: black;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  /* CSS styles for the products displayed in the item-results section */
+  #item-results .prod-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    width: 250px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #item-results .product-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+
+
+  }
+
+  #item-results .product-name {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #333;
+    font-weight: bold;
+  }
+
+  #item-results .product-price {
+    font-size: 16px;
+
+    margin-top: 10px;
+  }
+
+  #item-results p.no-results {
+    color: red;
+    font-style: italic;
+    margin-top: 20px;
+  }
+
+  .prod-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+  }
+
+  .product-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .product-name {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+
+  .product-price {
+    font-size: 16px;
+    color: black;
+  }
+
+  .star-rating {
+    color: yellow;
+    font-size: 24px;
+  }
+
+  .product-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .product-price {
+    margin: 0;
+    color: black;
+  }
+
+  .buy-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: 0;
+  }
+
+  .buy-button img {
+    width: 40px;
+    height: 40px;
+  }
+</style>
+
+<header>
+  <div class="top-row">
+    <div class="logo">
+
+      <img src="images/logo.png" alt="logo" class="logo-icon" />
+      <h1>VaalElectronics</h1>
+    </div>
+    <div class="right">
+      <button id="cartButton" onclick="window.location.href='shopping-cart.php';">
+        <img src="images/shopping_cart_icon.svg" alt class="icon" />
+        <span id="cartItemCount">0</span>
+      </button>
+
+
+
+
+      <button class="account" id="accountButton">
+        <img src="images/person-circle.svg" alt="person-circle" class="icon-acc" />Account
+      </button>
+    </div>
+  </div>
+  <div class="bottom-row">
+    <div class="menu">
+      <a class="home-link" href="index.php"><img src="images/home_icon.svg" alt="home icon" class="icon"
+          href="#" />Home</a>
+
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="    search products   " />
+        <button class="search-btn">
+          <img src="images/search.svg" alt="search" class="search-icon" />
+        </button>
+      </div>
+
+
+      <div class="custom-dropdown">
+        <div class="selected-option">Select a Category <img src="images/dropdown.png" alt="dropdown"
+            class="dropdown-icon"></div>
+        <div class="options">
+          <div class="option" data-value="smartphones">Smartphones</div>
+          <div class="option" data-value="laptops">Laptops</div>
+          <div class="option" data-value="accessories">Accessories</div>
+          <div class="option" data-value="homeappliances">Home Appliances</div>
+        </div>
+      </div>
+
+      <a href="aboutus.php" style="text-decoration: none;color: black;">About Us</a>
+      <a href="contactus.php" style="text-decoration: none;color: black;">Contact Us</a>
+    </div>
+  </div>
+</header>
+<script>
+  let products = [
+    {
+      name: "Wireless Surround Sound System",
+
+      image: "images/wirelesssound.jpg",
+      ratings: 5, // Number of stars (out of 5)
+      price: 1799.00,
+      // Add other product properties here
+      buttonImage: "images/cart-plus-fill.svg"// Path to the image for the button
+    },
+    {
+      name: "Hisense 65`` class H6500F",
+
+      image: "images/HisenseTV.jpg",
+      ratings: 5, // Number of stars (out of 5)
+      price: 11999.00,
+      // Add other product properties here
+      buttonImage: "images/cart-plus-fill.svg"// Path to the image for the button
+    },
+    {
+      name: "492lt Boutique Noire side-by-side",
+
+      image: "images/OIP.jpeg",
+      ratings: 5, // Number of stars (out of 5)
+      price: 10999.00,
+      // Add other product properties here
+      buttonImage: "images/cart-plus-fill.svg"// Path to the image for the button
+    },
+    {
+      name: "Samsung microwave",
+
+      image: "images/samsungmicrowave.jpg",
+      ratings: 5, // Number of stars (out of 5)
+      price: 5999.00,
+      // Add other product properties here
+      buttonImage: "images/cart-plus-fill.svg"// Path to the image for the button
+    },
+    {
+      name: "All-In-One Ventless Washer",
+
+      image: "images/washingmachine.jpeg",
+      ratings: 5, // Number of stars (out of 5)
+      price: 20999.00,
+      // Add other product properties here
+      buttonImage: "images/cart-plus-fill.svg"// Path to the image for the button
+    },
+    {
+      name: "MacBook Air 15",
+
+      image: "images/Macbook_Air_15.jpg",
+      ratings: 5, // Number of stars (out of 5)
+      price: 17999.00,
+      // Add other product properties here
+      buttonImage: "images/cart-plus-fill.svg"// Path to the image for the button
+    },
+    {
+      name: "ASUS zenbook 14 flip",
+
+      image: "images/zenbook_14_flip_oled_up3404va_product_photo_8b_ponder_blue_13.jpg",
+      ratings: 5, // Number of stars (out of 5)
+      price: 12999.00,
+      // Add other product properties here
+      buttonImage: "images/cart-plus-fill.svg"// Path to the image for the button
+    },
+    {
+      name: "HUAWEI P60 PRO 8GB+256GB BLACK",
+
+      image: "images/HuaweiP60.jpg",
+      ratings: 5, // Number of stars (out of 5)
+      price: 10999.00,
+      // Add other product properties here
+      buttonImage: "images/cart-plus-fill.svg"// Path to the image for the button
+    },
+    {
+      name: "iPhone 14 Pro Max CD Texture Plating",
+
+      image: "images/iphone14promax.jpg",
+      ratings: 5, // Number of stars (out of 5)
+      price: 22999.00,
+      // Add other product properties here
+      buttonImage: "images/cart-plus-fill.svg"// Path to the image for the button
+    },
+
+    {
+      name: "Samsung Galaxy S23 Ultra",
+
+      image: "images/samsung.jpg",
+      ratings: 5, // Number of stars (out of 5)
+      price: 30999.00,
+      // Add other product properties here
+      buttonImage: "images/cart-plus-fill.svg"// Path to the image for the button
+    },
+    {
+      name: "MFI Apple USB C",
+
+      image: "images/USB_C.jpg",
+      ratings: 5, // Number of stars (out of 5)
+      price: 299.00,
+      // Add other product properties here
+      buttonImage: "images/cart-plus-fill.svg"// Path to the image for the button
+    },
+    {
+      name: "Aple Airpods",
+
+      image: "images/airpods_pdp_image_position-4__wwen.webp",
+      ratings: 5, // Number of stars (out of 5)
+      price: 450.00,
+      // Add other product properties here
+      buttonImage: "images/cart-plus-fill.svg"// Path to the image for the button
+    },
+
+
+    // Add more products as needed
+  ];
+
+  function displaySearchResults() {
+    const searchInput = document.querySelector(".search-bar");
+    const searchQuery = searchInput.value.trim().toLowerCase();
+    const matchingProducts = products.filter(product =>
+      product.name.toLowerCase().includes(searchQuery)
+    );
+
+    const itemResultsSection = document.getElementById("item-results");
+    itemResultsSection.innerHTML = ""; // Clear previous search results
+    const pageInfoDiv = document.querySelector('.page-info');
+    if (pageInfoDiv) {
+      pageInfoDiv.style.display = 'none'; // Hide .page-info div
+    }
+
+    if (matchingProducts.length > 0) {
+      // Create a parent container for the matching products
+      const productsContainer = document.createElement("div");
+      productsContainer.className = "products-container";
+
+      // Iterate through matching products and create product containers
+      matchingProducts.forEach((product, index) => {
+        const productContainer = document.createElement("div");
+        productContainer.className = "prod-container";
+        productContainer.id = `product${index + 1}`;
+        productContainer.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" class="product-image">
+        <h2 class="product-name">${product.name}</h2>
+        <div class="star-rating">${generateStarRating(product.ratings)}</div>
+        <div class="product-details">
+          <p class="product-price">R${product.price.toFixed(2)}</p>
+          <button class="buy-button"><img src="${product.buttonImage}" alt="Add to Cart"></button>
+        </div>
+      `;
+        // Apply inline-block style to product containers
+        productContainer.style.display = "inline-block";
+
+        // Append each product container to the productsContainer
+        productsContainer.appendChild(productContainer);
+      });
+
+      // Append the productsContainer to the item-results section
+      itemResultsSection.appendChild(productsContainer);
+    } else {
+      // If no matching product found, display a message or handle it accordingly
+      itemResultsSection.innerHTML = "<p>No matching product found!</p>";
+    }
+  }
+
+
+  function generateStarRating(ratings) {
+    const fullStars = Math.floor(ratings);
+    const halfStar = ratings % 1 !== 0;
+    const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+
+    const stars = '★'.repeat(fullStars) + (halfStar ? '½' : '') + '☆'.repeat(emptyStars);
+    return stars;
+  }
+
+  const searchButton = document.querySelector(".search-btn");
+  searchButton.addEventListener("click", displaySearchResults);
+
+
+
+  // Your shared JavaScript code here
+  let lastRestartTimestamp = localStorage.getItem('lastRestartTimestamp');
+  let currentTimestamp = Date.now();
+  let isServerRestarted = !lastRestartTimestamp || currentTimestamp - lastRestartTimestamp > 60000; // Assuming 60 seconds as a restart threshold
+
+  let cartCount = isServerRestarted ? 0 : (localStorage.getItem('cartCount') ? parseInt(localStorage.getItem('cartCount')) : 0);
+
+  document.getElementById('cartItemCount').innerText = cartCount;
+
+  function addToCartCount() {
+    cartCount++;
+    document.getElementById('cartItemCount').innerText = cartCount;
+    localStorage.setItem('cartCount', cartCount.toString());
+    localStorage.setItem('lastRestartTimestamp', currentTimestamp.toString());
+  }
+
+  if (isServerRestarted) {
+    // If the server has just started or restarted, reset the cart count to zero
+    cartCount = 0;
+    localStorage.setItem('cartCount', '0');
+    localStorage.setItem('lastRestartTimestamp', currentTimestamp.toString());
+    document.getElementById('cartItemCount').innerText = cartCount;
+  }
+
+
+
+
+</script>
