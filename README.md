@@ -1,4 +1,5 @@
 #ECOMMERCE PROJECT
+
 Description of the Project
 The website we plan to create is an online storefront called VaalElectronics. It attempts 
 to address the issue of providing clients with easy access to high-quality electrical 
@@ -23,47 +24,51 @@ will build trust and promote repeat business. Our website should have a fast res
 user interface.
 
 site map
-
-![Site Map](website-figma-screenshot/site-map.png)
+<img src="website-figma-screenshot/site-map.png" alt="Site Map" width="448" height="251"/>
 
 Home page
-![Home Page](website-figma-screenshot/homepage.png)
+<img src="website-figma-screenshot/homepage.png" alt="Home Page" width="448" height="251"/>
 
 ACCOUNT
 
 Registration Form
-
-<img src="website-figma-screenshot/registerpage.png" alt="Registration" width="200"/>
+<img src="website-figma-screenshot/registerpage.png" alt="Registration" width="448" height="251"/>
 
 Login Form
-![Login](website-figma-screenshot/loginpage.png)
+<img src="website-figma-screenshot/loginpage.png" alt="Login" width="448" height="251"/>
 
-Update-Password
-![update-password](website-figma-screenshot/forgetpasswordpage.png)
+Update Password
+<img src="website-figma-screenshot/forgetpasswordpage.png" alt="update-password" width="448" height="251"/>
 
 All Product Page
-![Allproducts](website-figma-screenshot/Allproductpage.png)
+<img src="website-figma-screenshot/Allproductpage.png" alt="Allproducts" width="448" height="251"/>
 
 Smartphones Page
-![Smartphones](website-figma-screenshot/smartphonespage.png)
+<img src="website-figma-screenshot/smartphonespage.png" alt="Smartphones" width="448" height="251"/>
 
 Laptops Page
-![Laptops](website-figma-screenshot/laptopspage.png)
+<img src="website-figma-screenshot/laptopspage.png" alt="Laptops" width="448" height="251"/>
 
 Accessories Page
-![accessories](website-figma-screenshot/accessoriespage.png)
+<img src="website-figma-screenshot/accessoriespage.png" alt="accessories" width="448" height="251"/>
 
 Home Appliances
-![Homeappliances](website-figma-screenshot/homeappliancespage.png)
+<img src="website-figma-screenshot/homeappliancespage.png" alt="Homeappliances" width="448" height="251"/>
 
-Shopping-cart page
-![shopping-cart](website-figma-screenshot/shppingcartpage.png)
+Shopping Cart Page
+<img src="website-figma-screenshot/shppingcartpage.png" alt="shopping-cart" width="448" height="251"/>
 
-About Us page
-![AboutUs](website-figma-screenshot/aboutuspage.png)
+About Us Page
+<img src="website-figma-screenshot/aboutuspage.png" alt="AboutUs" width="448" height="251"/>
 
-Contact Us page
-![contactUs](website-figma-screenshot/contactuspage.png)
+Contact Us Page
+<img src="website-figma-screenshot/contactuspage.png" alt="contactUs" width="448" height="251"/>
+
+
+
+
+
+
 
 In conclusion, the journey of creating VaalElectronics has been thrilling. The project 
 gave us the opportunity to comprehend the challenges of developing an intuitive Ecommerce platform, particularly in the cutthroat sector. VaalElectronics strives to not 
