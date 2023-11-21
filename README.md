@@ -21,33 +21,50 @@ iii. Website Goal(s): Our website's objective is to develop an aesthetically app
 website with simple navigation, rapid page loads, and secure payment gateways that 
 will build trust and promote repeat business. Our website should have a fast responsive 
 user interface.
+
 site map
+
 ![Site Map](website-figma-screenshot/site-map.png)
+
 Home page
 ![Home Page](website-figma-screenshot/homepage.png)
-Accoung
+
+ACCOUNT
+
 Registration Form
-![Registration](website-figma-screenshot/registerpage.png)
+
+<img src="website-figma-screenshot/registerpage.png" alt="Registration" width="200"/>
+
 Login Form
 ![Login](website-figma-screenshot/loginpage.png)
+
 Update-Password
 ![update-password](website-figma-screenshot/forgetpasswordpage.png)
+
 All Product Page
 ![Allproducts](website-figma-screenshot/Allproductpage.png)
+
 Smartphones Page
 ![Smartphones](website-figma-screenshot/smartphonespage.png)
+
 Laptops Page
 ![Laptops](website-figma-screenshot/laptopspage.png)
+
 Accessories Page
 ![accessories](website-figma-screenshot/accessoriespage.png)
+
 Home Appliances
 ![Homeappliances](website-figma-screenshot/homeappliancespage.png)
+
 Shopping-cart page
 ![shopping-cart](website-figma-screenshot/shppingcartpage.png)
+
 About Us page
 ![AboutUs](website-figma-screenshot/aboutuspage.png)
+
 Contact Us page
 ![contactUs](website-figma-screenshot/contactuspage.png)
+
 In conclusion, the journey of creating VaalElectronics has been thrilling. The project 
 gave us the opportunity to comprehend the challenges of developing an intuitive Ecommerce platform, particularly in the cutthroat sector. VaalElectronics strives to not 
 just meet the clients’ expectations but also exceed them by putting a strong emphasis 
